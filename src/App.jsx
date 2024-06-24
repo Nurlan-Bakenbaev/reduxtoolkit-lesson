@@ -14,10 +14,18 @@ const App = () => {
   return (
     <div className={`wrapper ${!mode && "dark"}`}>
       <div className="container">
-        <Button variant="contained" color="success">
+        <Button
+          onClick={() => dispatch(increase())}
+          variant="contained"
+          color="success"
+        >
           <FaPlus />
         </Button>
-        <Button variant="outlined" color="error">
+        <Button
+          onClick={() => dispatch(decrease())}
+          variant="outlined"
+          color="error"
+        >
           <FaMinus />
         </Button>
         <h1>{count}</h1>
